@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="rocket" class="com.bl.beans.Rocket" init-method="prepare" destroy-method="release">
+		<constructor-arg value="24"></constructor-arg>
+		<property name="level" value="100"></property>
+	</bean>
+	
+	<bean id="shutdownHook" class="com.bl.beans.ShutdownHook">
+	</bean>
+</beans>
